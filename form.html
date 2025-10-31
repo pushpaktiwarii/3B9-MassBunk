@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Poll authorised by UCER</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 720px; margin: auto; }
+        form { display: grid; gap: 10px; }
+        label { font-weight: 600; }
+        .row { display:flex; gap:10px; align-items:center; }
+        input[type="text"], input[type="email"], input[type="password"], select, textarea {
+            width: 100%; padding: 8px; box-sizing: border-box;
+        }
+        .actions { display:flex; gap:10px; }
+    </style>
+</head>
+<body>
+    <h1>Mass Bunk Poll</h1>
+
+    <form id="simpleForm" action="#" method="post">
+        <div>
+            <label>Full name</label>
+            <input type="text" placeholder="Jane Doe" required />
+        </div>
+
+        <div>
+            <label>Roll Number</label>
+            <input type="text" placeholder="college ctudent id" required />
+        </div>
+
+        <div>
+            <label>Section</label>
+            <input type="text" minlength="3" required />
+        </div>
+
+        <div class="row">
+            <div style="flex:1">
+                <label for="permission">Are You ready for Mass Bunk</label>
+                <select id="permission" name="Are You ready for Mass Bunk" required>
+                    <option value="">Select</option>
+                    <option>Yeah</option>
+                    <option>No</option>
+                    <option>Maybe</option>
+                    <option>Main sir ko bata dunga</option>
+                </select>
+            </div>
+        </div>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <label><input type="radio" name="gender" value="female" /> Female</label>
+            <label><input type="radio" name="gender" value="male" /> Male</label>
+            <label><input type="radio" name="gender" value="other" /> Gay</label>
+        </fieldset>
+
+
+
+        <div>
+            <label for="message">Suggestions?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your message..."></textarea>
+        </div>
+
+        <div class="actions">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
